@@ -16,6 +16,15 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox checkBox;
     private RadioGroup radioGroup;
     private Button suma;
+    private Button resta;
+    private Button mult;
+    private Button div;
+    private Button igual;
+
+    private double primerNumero;
+    private double segundoNumero;
+    private double resultado;
+
     private TextView display;
     private TextView operacionActual;
 
@@ -28,10 +37,11 @@ public class MainActivity extends AppCompatActivity {
         display=findViewById(R.id.display);
         operacionActual=findViewById(R.id.operacion);
 
-
         checkBox=findViewById(R.id.checkBox);
         radioGroup=findViewById(R.id.radioGroup);
         anyadirListenerAlCheckbox();
+
+        igual=findViewById(R.id.boton_igual);
 
     }
 
@@ -56,6 +66,14 @@ public class MainActivity extends AppCompatActivity {
             display.setText(texto+b.getText());
 
         if (texto.length()==16) avisoMaximoAlcanzado();
+
+    }
+
+    public void botonOperacionPulsado(View view){
+        Button b = (Button) view;
+        String operacion = (String) b.getText();
+
+        operacionActual.setText(operacion);
 
     }
 
