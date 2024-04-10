@@ -15,18 +15,13 @@ import java.util.EventListener;
 public class MainActivity extends AppCompatActivity {
     private CheckBox checkBox;
     private RadioGroup radioGroup;
-    private Button suma;
-    private Button resta;
-    private Button mult;
-    private Button div;
-    private Button igual;
-
-    private double primerNumero;
-    private double segundoNumero;
-    private double resultado;
+    private double primerNumero=0;
+    private double segundoNumero=0;
+    private double resultado=0;
 
     private TextView display;
     private TextView operacionActual;
+    private String
 
 
     @Override
@@ -36,12 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
         display=findViewById(R.id.display);
         operacionActual=findViewById(R.id.operacion);
-
-        suma=findViewById(R.id.boton_suma);
-        resta=findViewById(R.id.boton_restar);
-        mult=findViewById(R.id.boton_multiplicar);
-        div=findViewById(R.id.boton_dividir);
-        igual=findViewById(R.id.boton_igual);
 
         checkBox=findViewById(R.id.checkBox);
         radioGroup=findViewById(R.id.radioGroup);
@@ -76,15 +65,39 @@ public class MainActivity extends AppCompatActivity {
         String operacion = (String) b.getText();
 
         operacionActual.setText(operacion);
+        primerNumero=Double.parseDouble((String) display.getText());
+
+        display.setText("0");
     }
 
     private void avisoMaximoAlcanzado() {
         Toast.makeText(this,"Límite de caracteres alcanzado",Toast.LENGTH_SHORT).show();
     }
 
+    public void mostrarResultado(View v){
+        segundoNumero=Double.parseDouble((String) display.getText());
+        realizarOperacion();
+        display.setText(String.valueOf(resultado));
+
+    }
+    private void realizarOperacion(){
+        String operacionActual= String.valueOf(this.operacionActual);
+        if (operacionActual.equals("+")) {
+            resultado = primerNumero + segundoNumero;
+        } if (operacionActual.equals("-")) {
+            resultado = primerNumero-segundoNumero;
+        } if (operacionActual.equals("/")){
+            resultado = primerNumero/segundoNumero;
+        } if (operacionActual.equals("*")){
+            resultado = primerNumero*segundoNumero;
+        }
+    }
     public void clear(View v){
         display.setText("0");
         operacionActual.setText("Operación");
+        primerNumero=0;
+        segundoNumero=0;
+        resultado=0;
     }
     private void anyadirListenerAlCheckbox() {
         checkBox.setOnClickListener(new View.OnClickListener() {
