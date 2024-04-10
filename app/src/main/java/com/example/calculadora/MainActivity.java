@@ -15,6 +15,10 @@ import java.util.EventListener;
 public class MainActivity extends AppCompatActivity {
     private CheckBox checkBox;
     private RadioGroup radioGroup;
+    private Button suma;
+    private Button resta;
+    private Button mult;
+    private Button divi;
     private double primerNumero=0;
     private double segundoNumero=0;
     private double resultado=0;
@@ -28,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
 
         display=findViewById(R.id.display);
         operacionActual=findViewById(R.id.operacion);
+
+        suma=findViewById(R.id.boton_suma);
+        resta=findViewById(R.id.boton_restar);
+        mult=findViewById(R.id.boton_multiplicar);
+        divi=findViewById(R.id.boton_dividir);
 
         checkBox=findViewById(R.id.checkBox);
         radioGroup=findViewById(R.id.radioGroup);
@@ -100,6 +109,26 @@ public class MainActivity extends AppCompatActivity {
         primerNumero=0;
         segundoNumero=0;
         resultado=0;
+    }
+
+    public void eliminarOpciones(View v){
+        //TODO ARREGLAR ESTA VAINA
+        Button b = (Button) v;
+        String operacion = b.getText().toString();
+        switch (operacion){
+            case "SUMA":
+                suma.setVisibility(View.GONE);
+                break;
+            case "RESTA":
+                resta.setVisibility(View.GONE);
+                break;
+            case "MULTIPLICAR":
+                mult.setVisibility(View.GONE);
+                break;
+            case "DIVIDIR":
+                divi.setVisibility(View.GONE);
+                break;
+        }
     }
     private void anyadirListenerAlCheckbox() {
         checkBox.setOnClickListener(new View.OnClickListener() {

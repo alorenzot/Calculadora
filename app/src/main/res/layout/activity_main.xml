@@ -286,28 +286,28 @@
             android:id="@+id/radioButton"
             android:layout_width="84dp"
             android:layout_height="wrap_content"
-            android:onClick="botonOperacionPulsado"
+            android:onClick="eliminarOpciones"
             android:text="SUMA" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="81dp"
             android:layout_height="wrap_content"
-            android:onClick="botonOperacionPulsado"
+            android:onClick="eliminarOpciones"
             android:text="RESTA" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="139dp"
             android:layout_height="wrap_content"
-            android:onClick="botonOperacionPulsado"
+            android:onClick="eliminarOpciones"
             android:text="MULTIPLICAR" />
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="94dp"
             android:layout_height="wrap_content"
-            android:onClick="botonOperacionPulsado"
+            android:onClick="eliminarOpciones"
             android:text="DIVIDIR" />
     </RadioGroup>
 
