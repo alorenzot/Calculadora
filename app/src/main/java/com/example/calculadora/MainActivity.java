@@ -21,9 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView display;
     private TextView operacionActual;
-    private String
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,20 +73,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void mostrarResultado(View v){
         segundoNumero=Double.parseDouble((String) display.getText());
-        realizarOperacion();
+        if (segundoNumero!=0)
+            realizarOperacion();
         display.setText(String.valueOf(resultado));
 
     }
     private void realizarOperacion(){
-        String operacionActual= String.valueOf(this.operacionActual);
-        if (operacionActual.equals("+")) {
-            resultado = primerNumero + segundoNumero;
-        } if (operacionActual.equals("-")) {
-            resultado = primerNumero-segundoNumero;
-        } if (operacionActual.equals("/")){
-            resultado = primerNumero/segundoNumero;
-        } if (operacionActual.equals("*")){
-            resultado = primerNumero*segundoNumero;
+        switch (operacionActual.getText().toString()) {
+            case "+":
+                resultado = primerNumero + segundoNumero;
+                break;
+            case "-":
+                resultado = primerNumero - segundoNumero;
+                break;
+            case "÷":
+                resultado = primerNumero / segundoNumero;
+                break;
+            case "x":
+                resultado = primerNumero * segundoNumero;
+                break;
         }
     }
     public void clear(View v){
