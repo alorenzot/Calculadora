@@ -37,12 +37,15 @@ public class MainActivity extends AppCompatActivity {
         display=findViewById(R.id.display);
         operacionActual=findViewById(R.id.operacion);
 
+        suma=findViewById(R.id.boton_suma);
+        resta=findViewById(R.id.boton_restar);
+        mult=findViewById(R.id.boton_multiplicar);
+        div=findViewById(R.id.boton_dividir);
+        igual=findViewById(R.id.boton_igual);
+
         checkBox=findViewById(R.id.checkBox);
         radioGroup=findViewById(R.id.radioGroup);
         anyadirListenerAlCheckbox();
-
-        igual=findViewById(R.id.boton_igual);
-
     }
 
     public void anyadirComa(View v){
@@ -66,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
             display.setText(texto+b.getText());
 
         if (texto.length()==16) avisoMaximoAlcanzado();
-
     }
 
     public void botonOperacionPulsado(View view){
@@ -74,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         String operacion = (String) b.getText();
 
         operacionActual.setText(operacion);
-
     }
 
     private void avisoMaximoAlcanzado() {
@@ -89,14 +90,13 @@ public class MainActivity extends AppCompatActivity {
         checkBox.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (checkBox.isChecked()) {
-                    checkBox.setText("Ocultando opciones");
+                    checkBox.setText("Ocultando deshabiltar opciones");
                     radioGroup.setVisibility(View.GONE);
                 } else {
-                    checkBox.setText("Mostrando opciones");
+                    checkBox.setText("Mostrando deshabilitar opciones");
                     radioGroup.setVisibility(View.VISIBLE);
                 }
             }
-
         });
     }
 }
