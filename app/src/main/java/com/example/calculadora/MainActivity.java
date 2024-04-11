@@ -80,10 +80,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mostrarResultado(View v){
+
         segundoNumero=Double.parseDouble((String) display.getText());
         if (segundoNumero!=0)
             realizarOperacion();
-        display.setText(String.valueOf(resultado));
+        if (resultado==0) display.setText("0");
+        else display.setText(String.valueOf(resultado));
+        operacionActual.setText("");
 
     }
     private void realizarOperacion(){
@@ -104,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void clear(View v){
         display.setText("0");
-        operacionActual.setText("Operación");
+        operacionActual.setText("");
         primerNumero=0;
         segundoNumero=0;
         resultado=0;
