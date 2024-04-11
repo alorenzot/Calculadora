@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private double primerNumero=0;
     private double segundoNumero=0;
     private double resultado=0;
-
     private TextView display;
     private TextView operacionActual;
     @Override
@@ -112,29 +111,39 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void eliminarOpciones(View v){
-        //TODO ARREGLAR ESTA VAINA
+        reestablecerBotones();
         Button b = (Button) v;
         String operacion = b.getText().toString();
         switch (operacion){
             case "SUMA":
-                suma.setVisibility(View.GONE);
+                suma.setVisibility(View.INVISIBLE);
                 break;
             case "RESTA":
-                resta.setVisibility(View.GONE);
+                resta.setVisibility(View.INVISIBLE);
                 break;
             case "MULTIPLICAR":
-                mult.setVisibility(View.GONE);
+                mult.setVisibility(View.INVISIBLE);
                 break;
             case "DIVIDIR":
-                divi.setVisibility(View.GONE);
+                divi.setVisibility(View.INVISIBLE);
                 break;
         }
     }
+
+    private void reestablecerBotones() {
+        suma.setVisibility(View.VISIBLE);
+        resta.setVisibility(View.VISIBLE);
+        divi.setVisibility(View.VISIBLE);
+        mult.setVisibility(View.VISIBLE);
+    }
+
     private void anyadirListenerAlCheckbox() {
         checkBox.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (checkBox.isChecked()) {
                     checkBox.setText("Ocultando deshabiltar opciones");
+                    reestablecerBotones();
+                    radioGroup.clearCheck();
                     radioGroup.setVisibility(View.GONE);
                 } else {
                     checkBox.setText("Mostrando deshabilitar opciones");
