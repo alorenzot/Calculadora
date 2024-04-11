@@ -80,14 +80,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void mostrarResultado(View v){
-
         segundoNumero=Double.parseDouble((String) display.getText());
         if (segundoNumero!=0)
             realizarOperacion();
         if (resultado==0) display.setText("0");
         else display.setText(String.valueOf(resultado));
         operacionActual.setText("");
-
     }
     private void realizarOperacion(){
         switch (operacionActual.getText().toString()) {

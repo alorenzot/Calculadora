@@ -12,10 +12,12 @@
         android:id="@+id/display"
         android:layout_width="380dp"
         android:layout_height="176dp"
+        android:layout_marginTop="32dp"
         android:gravity="center_vertical|end"
         android:maxLength="16"
         android:text="0"
         android:textSize="70sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,6 +26,7 @@
         android:id="@+id/tableLayout"
         android:layout_width="377dp"
         android:layout_height="330dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="@+id/display"
         app:layout_constraintStart_toStartOf="@+id/display"
         app:layout_constraintTop_toBottomOf="@+id/display">
@@ -44,7 +47,8 @@
                     android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_clear"
@@ -52,9 +56,12 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
+                    android:fontFamily="sans-serif"
                     android:onClick="clear"
                     android:text="CLEAR"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </TableRow>
 
@@ -73,9 +80,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="7"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_8"
@@ -83,9 +92,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="8"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_9"
@@ -93,9 +104,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="9"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_dividir"
@@ -103,9 +116,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonOperacionPulsado"
                     android:text="÷"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </TableRow>
 
@@ -124,9 +139,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="4"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_5"
@@ -134,9 +151,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="5"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_6"
@@ -144,18 +163,22 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="6"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_multiplicar"
                     android:layout_width="wrap_content"
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonOperacionPulsado"
                     android:text="x"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </TableRow>
@@ -175,9 +198,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="1"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_2"
@@ -185,9 +210,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="2"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_3"
@@ -195,9 +222,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="3"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_restar"
@@ -205,9 +234,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonOperacionPulsado"
                     android:text="-"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </TableRow>
 
@@ -226,9 +257,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="anyadirComa"
                     android:text="."
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_0"
@@ -236,9 +269,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonPulsado"
                     android:text="0"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_igual"
@@ -246,9 +281,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="mostrarResultado"
                     android:text="="
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/boton_suma"
@@ -256,9 +293,11 @@
                     android:layout_height="60dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#9A85CF"
                     android:onClick="botonOperacionPulsado"
                     android:text="+"
-                    android:textSize="25sp" />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </TableRow>
     </TableLayout>
@@ -267,6 +306,8 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="Mostrando deshabilitar opciones"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
@@ -276,6 +317,7 @@
         android:id="@+id/radioGroup"
         android:layout_width="396dp"
         android:layout_height="43dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/checkBox"
         app:layout_constraintStart_toStartOf="@+id/checkBox"
@@ -284,28 +326,28 @@
         <RadioButton
             android:id="@+id/radioButton"
             android:layout_width="84dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:onClick="eliminarOpciones"
             android:text="SUMA" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="81dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:onClick="eliminarOpciones"
             android:text="RESTA" />
 
         <RadioButton
             android:id="@+id/radioButton3"
             android:layout_width="139dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:onClick="eliminarOpciones"
             android:text="MULTIPLICAR" />
 
         <RadioButton
             android:id="@+id/radioButton4"
             android:layout_width="94dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:onClick="eliminarOpciones"
             android:text="DIVIDIR" />
     </RadioGroup>
